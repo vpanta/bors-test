@@ -11,6 +11,12 @@ jobs:
           name: Test test test
           command: |
             echo "I'm testing!"
+            sleep 60
+            if [[ -n "${FAIL_THE_QUEUE}" ]]; then
+              echo "uh oh, we're gonna fail!"
+              exit 1
+            fi
+            echo "Ok! All tested!"
   publish:
     docker:
       - image: cimg/base:stable
