@@ -26,9 +26,7 @@ workflows:
       - test:
           filters:
             branches:
-              only:
-                - staging
-                - trying
+              ignore: main
       - publish:
           requires:
             - test
