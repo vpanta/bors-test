@@ -26,12 +26,10 @@ workflows:
       - test:
           filters:
             branches:
-              only:
-                - staging
-                - trying
+              ignore: main
       - publish:
           requires:
             - test
           filters:
             branches:
-              only: staging
+              only: bors-mq/staging
