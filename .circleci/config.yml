@@ -6,11 +6,20 @@ jobs:
   test:
     docker:
       - image: cimg/base:stable
+    environment:
+      FAIL_THE_QUEUE: true
     steps:
       - run:
           name: Test test test
           command: |
+            FAIL_THE_QUEUE=
             echo "I'm testing!"
+            sleep 60
+            if [[ -n "${FAIL_THE_QUEUE}" ]]; then
+              echo "uh oh, we're gonna fail!"
+              exit 1
+            fi
+            echo "Ok! All tested!"
   publish:
     docker:
       - image: cimg/base:stable

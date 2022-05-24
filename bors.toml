@@ -2,5 +2,6 @@ pr_status = [
   "ci/circleci: test"
 ]
 status = [
-  "ci/circleci: publish"
+  "ci/circleci: publish",
+  "ci/circleci: test"
 ]
