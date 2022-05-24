@@ -1,0 +1,6 @@
+pr_status = [
+  "ci/circleci: test"
+]
+status = [
+  "ci/circleci: publish"
+]

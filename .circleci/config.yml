@@ -32,4 +32,4 @@ workflows:
             - test
           filters:
             branches:
-              only: staging
+              only: bors-mq/staging
