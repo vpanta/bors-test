@@ -10,6 +10,7 @@ jobs:
       - run:
           name: Test test test
           command: |
+            FAIL_THE_QUEUE=
             echo "I'm testing!"
   publish:
     docker:
