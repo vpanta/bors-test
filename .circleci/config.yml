@@ -6,6 +6,8 @@ jobs:
   test:
     docker:
       - image: cimg/base:stable
+    environment:
+      FAIL_THE_QUEUE: true
     steps:
       - run:
           name: Test test test
